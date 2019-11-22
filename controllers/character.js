@@ -3,7 +3,7 @@ const Character = require("../models/character");
 exports.getCharacters = (req, res, next) => {
   Character.findAll()
     .then(characters => {
-      console.log(characters);
+      res.status(200).json({ characters });
     })
     .catch(err => {
       console.log(err);
