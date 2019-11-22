@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 8080;
 const express = require("express");
 const characterRoutes = require("./routes/character");
 const bodyParser = require("body-parser");
@@ -35,4 +36,4 @@ sequelize
     console.log(err);
   });
 //Associations
-app.listen(8080);
+app.listen(PORT);
